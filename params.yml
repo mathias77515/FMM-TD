@@ -1,0 +1,61 @@
+Method: 'FMM'
+
+Sky:
+    CMB:
+        cmb: False
+        r: 0
+        Alens: 1
+
+    Foregrounds:
+
+        # Thermal Dust emission
+        Dust: True
+        # Synchrotron emission
+        Synchrotron: False
+
+    nside: 64
+
+QUBIC:
+    method: 'MM'                                 # 'MM' for QUBIC map-making, 'fake' for fake map-making, 'spec' for spectrum based
+    randomreal: True
+    npointings: 1000
+    nsub: 4
+    nrec: 1
+    seed: 0
+    iteration: 1
+    ndet: 1
+    npho150: 1
+    npho220: 0
+    synthbeam_kmax: 1
+    detector_nep: 1.0e-15
+    nhwp_angles: 3
+    dtheta: 15
+    type: 'two'
+    covcut: 0.20
+    kappa: 0
+    convolution: False
+    bandpass_correction: True
+    RA_center: 100
+    DEC_center: -157
+    dust_model: 'd0'
+    sync_model: 's0'
+    fsky: 0.035
+
+PCG:
+    maxiter: 2000
+    tol: 1.0e-20
+    gif: True
+
+Data:
+    datafilename: 'MC'
+    planck: 
+        30GHz: False
+        44GHz: False
+        70GHz: False
+        100GHz: False
+        143GHz: False
+        217GHz: False
+        353GHz: False
+    level_planck_noise: 0
+    use_external_data: True
+
